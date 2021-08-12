@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('user.blog');
+        return view('admin/home');
     }
 }

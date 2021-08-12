@@ -28,14 +28,12 @@
       <li class="header">HEADER</li>
       <!-- Optionally, you can add icons to the links -->
       <li class="active"><a href="#"><span>Link</span></a><</li>
-      <li><a href="#"><span>Another Link</span></a></li>
-      <li class="treeview">
-        <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-        <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
-        </ul>
-      </li>
+      <li><a href="{{ route('post.index') }}"><i class="fa fa-circle-o"></i> <span>Posts</span></a></li>
+      <li><a href="{{ route('tag.index') }}"><i class="fa fa-circle-o"></i><span>Tags</span></a></li>
+      <li><a href="{{ route('category.index') }}"><i class="fa fa-circle-o"></i><span>Categories</span></a></li>
+      <li><a href="{{ route('user.index') }}"><i class="fa fa-circle-o"></i><span>Users</span></a></li>
+    
+     
     </ul><!-- /.sidebar-menu -->
 
   </div><!-- /.sidebar -->

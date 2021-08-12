@@ -33,7 +33,7 @@
                   </div>
                 </div>
                 <div class="box-body">
-                  Start creating your amazing application!
+                  Start creating your amazing application! Admin Page My Nigga
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">

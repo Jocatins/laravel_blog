@@ -11,9 +11,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-info">
-
-
-               <!-- general form elements -->
+                <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Tag Titles</h3>
