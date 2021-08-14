@@ -1,5 +1,10 @@
     @extends('admin.layouts.app')
 
+    @section('headSection')
+    <link rel="stylesheet" href="{{ asset('admin/plugins/datatables/dataTables.bootstrap.css') }}">
+
+@endsection
+
 @section('main-content')
 
   <!-- Content Wrapper. Contains page content -->
@@ -18,9 +23,12 @@
             <div class="box-header with-border">
               <h3 class="box-title">Titles</h3>
             </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
+         
+            {{-- Including Error messages --}}
+            @include('includes.messages')
+            <form role="form" action="{{ route('post.store') }}" method="post">
+
+              {{ csrf_field() }}
               <div class="box-body">
 
                 <div class="col-lg-6">
@@ -72,11 +80,11 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body pad">
-                  <form>
+                  
                     <textarea class="textarea" name="body"
                     placeholder="Place some text here" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                 </textarea>
-                  </form>
+                  
                 </div>
               </div>
             </div>
@@ -84,6 +92,7 @@
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{ route('post.index') }}" class="btn btn-warning">Back</a>
               </div>
             </form>
           </div>
@@ -97,4 +106,23 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+@endsection
+
+@section('footerSection')
+<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true, 
+      "autoWidth": false
+    });
+  });
+</script>
+
 @endsection

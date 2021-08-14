@@ -13,3 +13,11 @@ php artisan make:model Post -m
 
 resource controller
 php artisan make:controller Admin/PostController --resource
+
+php artisan Enter
+
+Migrations
+
+php artisan migrate:rollback
+php artisan migrate:reset
+

@@ -16,9 +16,10 @@
             <div class="box-header with-border">
               <h3 class="box-title">Tag Titles</h3>
             </div> 
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
+              {{-- Including Error messages --}}
+           @include('includes.messages')
+            <form role="form" action="{{ route('tag.store') }}" method="POST">
+              {{ csrf_field() }}
               <div class="box-body">
 
                 <div class="col-lg-offset-3 col-lg-6">
@@ -33,6 +34,7 @@
                       </div>
                       <div class="form-group">
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="{{ route('tag.index') }}" class="btn btn-warning">Back</a>
                       </div>
                     </form>
                   </div>
