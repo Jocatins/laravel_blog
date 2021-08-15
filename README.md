@@ -21,3 +21,6 @@ Migrations
 php artisan migrate:rollback
 php artisan migrate:reset
 
+difference between get and first in edit route
+get returns an object inside an array, 
+while first returns an object.
