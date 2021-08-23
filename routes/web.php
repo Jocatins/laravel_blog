@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'User'], function () {
 
     Route::get('/', [HomesController::class, 'index']);
-    Route::get('/post', [PostsController::class, 'index'])->name('post');
+    Route::get('post/{slug} ',  [PostsController::class, 'index'])->name('post');
 });
 
 //Admin Routes
